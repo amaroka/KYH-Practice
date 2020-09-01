@@ -2,17 +2,16 @@ import random
 
 n = random.randint(1, 50)
 print("Jag tänker på ett nummer mellan 1 och 50, Gissa??")
-def ask_number(text):
-    return int(text)
-Num = ask_number(input())
-print(str(Num))
+def ask_number():
+    return int(input("Din gissning "))
+
 
 def mainloop():
     Guess = 0
 
     while True:
-        text = input("Din gissning")
-        as_number = int(text)
+        Num = ask_number()
+        as_number = int(Num)
         Guess = Guess+1
 
         if as_number == n:
