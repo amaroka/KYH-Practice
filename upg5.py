@@ -26,4 +26,4 @@ def mainloop():
             print("Mitt nummer är lägre... Gissa igen!")
 
 Guess = mainloop()
-print("Du gissade så här mycket: " + str(Guess))
+print(f"Du gissade så här mycket: {Guess}")

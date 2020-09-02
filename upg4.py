@@ -10,7 +10,7 @@ while True:
     as_number = int(text)
     Guess = Guess+1
     if as_number == n:
-            print("Korrekt, du gissade så här mycket = " + str(Guess))
+            print(f"Korrekt, du gissade så här mycket =  {Guess}")
             break
 
     if as_number < n:
