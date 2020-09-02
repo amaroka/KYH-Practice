@@ -1,6 +1,6 @@
 import random
 
-n = random.randint(1 ,100)
+n = random.randint(1, 100)
 print("Jag tänker på ett nummer mellan 1 och 100, Gissa??")
 
 Guess = 0
@@ -18,5 +18,3 @@ while True:
 
     if as_number > n:
             print("Mitt nummer är lägre... Gissa igen!")
-
-
