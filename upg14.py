@@ -2,24 +2,29 @@
 
 FRUITS = ['banana', 'apple', 'orange']
 CARS = ['volvo', 'ford', 'tesla']
+TECH = ['Surfplatta', 'Mobil', 'Dator']
 
 
 def run():
     basket = [
-        'volvo', 'is', 'an', 'orange', 'apple'
+        'volvo', 'is', 'an', 'orange', 'apple', 'Surfplatta', 'Dator'
     ]
     cars = []
     fruits = []
+    tech = []
     rest = []
     for item in basket:
         if item in CARS:
             cars.append(item)
         elif item in FRUITS:
             fruits.append(item)
+        elif item in TECH:
+            tech.append(item)
         else:
             rest.append(item)
     write_things(cars, 'Cars')
     write_things(fruits, 'Fruits')
+    write_things(tech, 'Tech')
     write_things(rest, 'Misc')
 
 
