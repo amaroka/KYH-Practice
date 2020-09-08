@@ -29,7 +29,8 @@ def run():
 
 
 def write_things(items, kind):
-    print(f"{kind.upper()}",len(items),"st")
+    print(f"{kind.upper()} ({len(items)}st)")
+    items=sorted(items)
     for item in items:
         print(f" {item}")
 
