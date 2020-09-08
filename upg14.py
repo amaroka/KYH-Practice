@@ -6,14 +6,16 @@ TECH = ['Surfplatta', 'Mobil', 'Dator']
 
 
 def run():
-    basket = [
-        'volvo', 'is', 'an', 'orange', 'apple', 'Surfplatta', 'Dator'
-    ]
+    basket = input("Ange items (komma emellan): ").split(',')
+    # basket = [
+    #     'volvo', 'is', 'an', 'orange', 'apple', 'Surfplatta', 'Dator'
+    # ]
     cars = []
     fruits = []
     tech = []
     rest = []
     for item in basket:
+        item = item.strip()
         if item in CARS:
             cars.append(item)
         elif item in FRUITS:
