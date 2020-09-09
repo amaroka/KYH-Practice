@@ -1,9 +1,24 @@
-m = input("Skriv en valfri mening: ")
+# m = input("Skriv en valfri mening: ")
+#
+# def ordantal(text):
+#
+#     return len(text.split())
+#
+# count = ordantal(m)
+#
+# print(f"Antalet ord är: {count}")
 
-def ordantal(text):
+vokaler = 'aouåeiyäö'
+me = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod commodo tortor, sit amet dictum diam porta non. Duis eget lectus mi."
 
-    return len(text.split())
 
-count = ordantal(m)
+def vow(me, vokaler):
 
-print(f"Antalet ord är: {count}")
+    me = me.casefold()
+    count = {}.fromkeys(vokaler, 0)
+
+    for char in me:
+        if char in count:
+            count[char] += 1
+    return count
+print(vow(me, vokaler))
