@@ -1,18 +1,13 @@
-import pathlib
-
-p = pathlib.Path('system.log')
-content = p.read_text()
+from pathlib import Path
 
 
 def main():
     doc = "system.log"
     imp = []
     Key_phrase = ['BEAR', 'X-RAY']
+    file = Path(doc).read_text().splitlines()
 
-    with open(doc) as f:
-        f = f.readlines()
-
-    for line in f:
+    for line in file:
         line = line.strip()
         for phrase in Key_phrase:
             if phrase in line:
