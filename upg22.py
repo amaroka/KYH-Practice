@@ -34,8 +34,8 @@ def main():
             namn = input("Ange personens förnamn: ")
             tfn = input("Ange telefonnummer: ")
             people[namn] = tfn
-            dump = json.dumps(people)
-            p.write_text(dump)
+            dump = json.dumps(people, indent=2)
+            p.write_text(dump, encoding='utf8')
 
 
         else:
