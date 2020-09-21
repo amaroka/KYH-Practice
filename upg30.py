@@ -13,5 +13,4 @@
 #31.1
 tal = input("Ange tal med komma emellan: ").split(",")
 num = [int(i) for i in tal]
-print(f"Första talet: {tal[0]}\nSista talet: {tal[-1]}\nSumman av talen: {sum(num)}")
-print("Talen baklänges",",".join(tal[::-1]))
+print(f"Första talet: {tal[0]}\nSista talet: {tal[-1]}\nSumman av talen: {sum(num)}\nTalen baklänges: {','.join(tal[::-1])}")
