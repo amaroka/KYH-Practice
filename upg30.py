@@ -14,3 +14,4 @@
 tal = input("Ange tal med komma emellan: ").split(",")
 num = [int(i) for i in tal]
 print(f"Första talet: {tal[0]}\nSista talet: {tal[-1]}\nSumman av talen: {sum(num)}\nTalen baklänges: {','.join(tal[::-1])}")
+print(f"Udda tal:{tal[0:10:2]} \nJämna tal: {tal[1:100:2]}")
