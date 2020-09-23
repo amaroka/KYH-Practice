@@ -9,12 +9,14 @@ class Djur:
         self.wiki_url = wiki_url
         self.carnivore = carnivore
         self.name = name
-
     def carnivore_or_vegetarian(self):
         if self.carnivore:
             return "Köttätare"
         else:
             return "Vegetarian"
+    def get_html_table_row(self, html):
+        html += f'<tr><td><a href="{d.wiki_url}">{d.name}</td><td>{cell_2}</td></tr>\n'
+        return html
 if __name__ == '__main__':
     djur = []
     zebra = Djur('Zebra', False, 'https://sv.wikipedia.org/wiki/Zebror')
@@ -29,9 +31,9 @@ if __name__ == '__main__':
     djur.append(panda)
     html = '<html><table>'
     for d in djur:
-        cell_2 = Djur.carnivore_or_vegetarian(d)
+        cell_2 = d.carnivore_or_vegetarian()
+        html = d.get_html_table_row(html)
 
-        html += f'<tr><td><a href="{d.wiki_url}">{d.name}</td><td>{cell_2}</td></tr>\n'
     html += '</table></html>'
     OUTPUT_PATH.write_text(html, encoding='utf8')
     webbrowser.open(str(OUTPUT_PATH))
