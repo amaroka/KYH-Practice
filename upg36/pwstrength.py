@@ -3,12 +3,11 @@ def compute_strength(pw):
     legit = '#%&+_-'
     if len(pw) > 10:
         count += 1
-    if any(char.isalnum() for char in pw) == True:
-        count += 1
-    for i in pw:
-        if i in legit:
+    if any(char.isalpha() for char in pw):
+        if any(char.isdigit() for char in pw):
             count += 1
-            break
+    if any(char in legit for char in pw):
+            count += 1
     else:
         pass
     return count
