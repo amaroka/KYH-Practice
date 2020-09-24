@@ -8,6 +8,6 @@ def compute_strength(pw):
             count += 1
     if any(char in legit for char in pw):
             count += 1
-    else:
-        pass
+    if any(char not in legit and not char.isalnum() for char in pw):
+            count = 0
     return count

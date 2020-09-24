@@ -14,7 +14,7 @@ def test_password_with_symbols_gives_1_point():
     assert compute_strength(pw) == 1
 
 def test_password_with_any_other_symbols_gives_0_points():
-    pw = "/()"
+    pw = "a1asfhaslfh#/()"
     assert compute_strength(pw) == 0
 
 def test_password_with_length_and_alphanumeric_gives_2_points():
