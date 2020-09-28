@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-p = Path('../phonelists.json')
+p = Path('phonelists.json')
 content = p.read_text(encoding='UTF8')
 data = json.loads(content)
 people = data
