@@ -32,3 +32,7 @@ def test_password_with_alphanumeric_and_symbols_gives_2_points():
 def test_password_with_all_rules_gives_3_points():
     pw = "a1#" * 5
     assert compute_strength(pw) == 3
+
+def test_password_with_all_rules_and_not_viable_symbol_gives_0_points():
+    pw = "a1#/" * 4
+    assert compute_strength(pw) == 0
