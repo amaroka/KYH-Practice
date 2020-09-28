@@ -20,10 +20,10 @@
 # total()
 
 #39.3
-def total():
-    num = [1,2,3,4,5]
+def total(tot):
     produkt = 1
-    for x in num:
+    for x in tot:
         produkt *= x
     print(produkt)
-total()
+num = [1,2,3,4,5]
+total(num)
