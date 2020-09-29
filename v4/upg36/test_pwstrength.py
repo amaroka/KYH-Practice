@@ -1,4 +1,4 @@
-from upg36.pwstrength import compute_strength
+from v4.upg36.pwstrength import compute_strength
 
 
 def test_password_with_length_11_gives_1_point():
