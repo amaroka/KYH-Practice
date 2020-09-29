@@ -1,5 +1,6 @@
-def reverse(txt): #40.1
-    return txt
+def reverse(normal): #40.1
+    text = normal[::-1]
+    return text
 
 txt1 = "12345"[::-1]
 reverse(txt1)
