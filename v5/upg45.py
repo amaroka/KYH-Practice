@@ -5,7 +5,7 @@ def main():
     "Lisa":"9999999999",
     "Bodil": "555-666-789"
     }
-    print("Så här många personer finns: %s"% (len(people)))
+    print("Så här många personer finns: {:5}".format(len(people)))
     choice = input("1: Slå upp ett nummer:\n2: Redigera/lägg till nummer:\n>> ")
     if choice == "1":
         vem = input(f"Vem vill du ringa?", )
